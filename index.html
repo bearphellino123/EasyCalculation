@@ -1,0 +1,38 @@
+<style>
+body{
+background-Color : Black;
+color : LimeGreen;
+text-shadow : 0 0 10px LimeGreen;
+}
+button{
+background-Color : Black;
+border : 2px solid LimeGreen;
+border-radius : 20px;
+color : LimeGreen;
+}
+input{
+background-Color : Black;
+color : LimeGreen;
+border : 2px solid LimeGreen;
+border-radius : 20px;
+} 
+</style>
+<h1>EasyCalculation</h1>
+<p>Calculate easier</p>
+<br><br><input id="Percentuale" type="number" placeholder="%...">
+<br><br><input id="Numero" type="number" placeholder="number...">
+<br><br><button onclick="Calcola()">Calculate</button>
+<p id="Risultato"></p>
+<script>
+function Calcola() {
+let per = document.getElementById('Percentuale').value;
+let num = document.getElementById('Numero').value;
+if (per === "0"|| num === "0") {
+return;
+}
+num = Number(num);
+per = Number(per);
+let calcolo = num * per / 100;
+document.getElementById('Risultato').innerHTML = calcolo;
+}
+</script>
